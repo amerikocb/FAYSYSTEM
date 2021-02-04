@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7babecc733ee4e858f412022b91d445e" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="FAYCEModel.AccesoTipo" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FAYCEModel.AjusteInventario" Width="1.5" PointX="15.75" PointY="53.75" />
+        <EntityTypeShape EntityType="FAYCEModel.AjusteInventarioDetalle" Width="1.5" PointX="18" PointY="58.25" />
+        <EntityTypeShape EntityType="FAYCEModel.Almacen" Width="1.5" PointX="15.75" PointY="80.75" />
+        <EntityTypeShape EntityType="FAYCEModel.AutoCorriativoOrdenTrabajo" Width="1.5" PointX="15.75" PointY="62.75" />
+        <EntityTypeShape EntityType="FAYCEModel.BodegaInventarioOrdenTrabajo" Width="1.5" PointX="8.25" PointY="43.5" />
+        <EntityTypeShape EntityType="FAYCEModel.Cargo" Width="1.5" PointX="3" PointY="54.875" />
+        <EntityTypeShape EntityType="FAYCEModel.CategoriaTrabajo" Width="1.5" PointX="15.75" PointY="67.375" />
+        <EntityTypeShape EntityType="FAYCEModel.Cliente" Width="1.5" PointX="5.25" PointY="41" />
+        <EntityTypeShape EntityType="FAYCEModel.ComprobanteVenta" Width="1.5" PointX="21" PointY="68.125" />
+        <EntityTypeShape EntityType="FAYCEModel.ComprobanteVentaAuxiliar" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FAYCEModel.ComprobanteVentaDetalle" Width="1.5" PointX="23.25" PointY="63.125" />
+        <EntityTypeShape EntityType="FAYCEModel.Configuracion" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FAYCEModel.CorrelativoComprobante" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="FAYCEModel.Cotizacion" Width="1.5" PointX="8.25" PointY="51.375" />
+        <EntityTypeShape EntityType="FAYCEModel.CotizacionDetalle" Width="1.5" PointX="10.5" PointY="62.25" />
+        <EntityTypeShape EntityType="FAYCEModel.Departamento" Width="1.5" PointX="1.5" PointY="37.125" />
+        <EntityTypeShape EntityType="FAYCEModel.Egresos" Width="1.5" PointX="10.5" PointY="47.625" />
+        <EntityTypeShape EntityType="FAYCEModel.Empleado" Width="1.5" PointX="5.25" PointY="47.5" />
+        <EntityTypeShape EntityType="FAYCEModel.Empresa" Width="1.5" PointX="10.5" PointY="57.875" />
+        <EntityTypeShape EntityType="FAYCEModel.Estado" Width="1.5" PointX="3" PointY="47" />
+        <EntityTypeShape EntityType="FAYCEModel.Formulario" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="FAYCEModel.MarcaMaterial" Width="1.5" PointX="7.5" PointY="59" />
+        <EntityTypeShape EntityType="FAYCEModel.Material" Width="1.5" PointX="5.25" PointY="68.75" />
+        <EntityTypeShape EntityType="FAYCEModel.Menu" Width="1.5" PointX="6" PointY="43.875" />
+        <EntityTypeShape EntityType="FAYCEModel.MenuPerfil" Width="1.5" PointX="8.25" PointY="48" />
+        <EntityTypeShape EntityType="FAYCEModel.MotivoComprobante" Width="1.5" PointX="18.75" PointY="70.125" />
+        <EntityTypeShape EntityType="FAYCEModel.OperadorOrdenTrabajo" Width="1.5" PointX="10.5" PointY="44.125" />
+        <EntityTypeShape EntityType="FAYCEModel.OrdenCompra" Width="1.5" PointX="12.75" PointY="55.5" />
+        <EntityTypeShape EntityType="FAYCEModel.OrdenCompraDetalle" Width="1.5" PointX="15" PointY="76.75" />
+        <EntityTypeShape EntityType="FAYCEModel.OrdenTrabajo" Width="1.5" PointX="13.5" PointY="43.75" />
+        <EntityTypeShape EntityType="FAYCEModel.OrdenVenta" Width="1.5" PointX="18.75" PointY="52.75" />
+        <EntityTypeShape EntityType="FAYCEModel.OrdenVentaDetalle" Width="1.5" PointX="21" PointY="62.5" />
+        <EntityTypeShape EntityType="FAYCEModel.Perfil" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="FAYCEModel.Persona" Width="1.5" PointX="3" PointY="40.125" />
+        <EntityTypeShape EntityType="FAYCEModel.PosPrensaOrdenTrabajo" Width="1.5" PointX="15.75" PointY="40.25" />
+        <EntityTypeShape EntityType="FAYCEModel.PrensaOrdenTrabajo" Width="1.5" PointX="18.75" PointY="47.125" />
+        <EntityTypeShape EntityType="FAYCEModel.PresentacionMaterial" Width="1.5" PointX="7.5" PointY="68.625" />
+        <EntityTypeShape EntityType="FAYCEModel.Provincia" Width="1.5" PointX="0.75" PointY="42" />
+        <EntityTypeShape EntityType="FAYCEModel.Recepcion" Width="1.5" PointX="21" PointY="54.625" />
+        <EntityTypeShape EntityType="FAYCEModel.RecepcionDetalle" Width="1.5" PointX="26.25" PointY="62.125" />
+        <EntityTypeShape EntityType="FAYCEModel.Reporte" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="FAYCEModel.Requerimiento" Width="1.5" PointX="12.75" PointY="74.5" />
+        <EntityTypeShape EntityType="FAYCEModel.RequerimientoDetalle" Width="1.5" PointX="15" PointY="70.75" />
+        <EntityTypeShape EntityType="FAYCEModel.SalidaMaterial" Width="1.5" PointX="15.75" PointY="48" />
+        <EntityTypeShape EntityType="FAYCEModel.SalidaMaterialesDetalle" Width="1.5" PointX="18" PointY="61.875" />
+        <EntityTypeShape EntityType="FAYCEModel.Servicio" Width="1.5" PointX="15.75" PointY="58" />
+        <EntityTypeShape EntityType="FAYCEModel.Stock" Width="1.5" PointX="7.5" PointY="71.375" />
+        <EntityTypeShape EntityType="FAYCEModel.StockTransaccion" Width="1.5" PointX="12.75" PointY="60.75" />
+        <EntityTypeShape EntityType="FAYCEModel.TipoDocumento" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="FAYCEModel.TipoEstado" Width="1.5" PointX="0.75" PointY="48.5" />
+        <EntityTypeShape EntityType="FAYCEModel.TipoPago" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="FAYCEModel.TipoProfesion" Width="1.5" PointX="3" PointY="52.5" />
+        <EntityTypeShape EntityType="FAYCEModel.TipoUsuario" Width="1.5" PointX="8.25" PointY="56.5" />
+        <EntityTypeShape EntityType="FAYCEModel.TransferenciaStock" Width="1.5" PointX="18" PointY="80.5" />
+        <EntityTypeShape EntityType="FAYCEModel.TransferenciaStockDetalle" Width="1.5" PointX="20.25" PointY="80.875" />
+        <EntityTypeShape EntityType="FAYCEModel.UnidadMedida" Width="1.5" PointX="5.25" PointY="74" />
+        <EntityTypeShape EntityType="FAYCEModel.Usuario" Width="1.5" PointX="10.5" PointY="52" />
+        <AssociationConnector Association="FAYCEModel.FK_AjusteInventario_Almacen" />
+        <AssociationConnector Association="FAYCEModel.FK_AjusteInventario_Usuario" />
+        <AssociationConnector Association="FAYCEModel.FK_AjusteInventarioDetalle_AjusteInventario" />
+        <AssociationConnector Association="FAYCEModel.FK_Recepcion_Almacen" />
+        <AssociationConnector Association="FAYCEModel.FK_SalidaMaterialesDetalle_Almacen" />
+        <AssociationConnector Association="FAYCEModel.FK_TransferenciaStock_Almacen" />
+        <AssociationConnector Association="FAYCEModel.FK_TransferenciaStock_Almacen1" />
+        <AssociationConnector Association="FAYCEModel.FK_AutoCorriativoOrdenTrabajo_OrdenTrabajo" />
+        <AssociationConnector Association="FAYCEModel.FK_BodegaInventarioOrdenTrabajo_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_BodegaInventarioOrdenTrabajo_OdenTrabajo" />
+        <AssociationConnector Association="FAYCEModel.FK_Empleado_Cargo" />
+        <AssociationConnector Association="FAYCEModel.FK_CategoriaTrabajo_OrdenTrabajo" />
+        <AssociationConnector Association="FAYCEModel.FK_Paciente_Persona" />
+        <AssociationConnector Association="FAYCEModel.FK_ComprobanteVenta_MotivoComprobante" />
+        <AssociationConnector Association="FAYCEModel.FK_ComprobanteVentaDetalle_ComprobanteVenta" />
+        <AssociationConnector Association="FAYCEModel.FK_ComprobanteVentaDetalle_OrdenVentaDetalle" />
+        <AssociationConnector Association="FAYCEModel.FK_Cotizacion_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_Cotizacion_Usuario" />
+        <AssociationConnector Association="FAYCEModel.FK_CotizacionDetalle_Cotizacion" />
+        <AssociationConnector Association="FAYCEModel.FK_CotizacionDetalle_Servicio" />
+        <AssociationConnector Association="FAYCEModel.FK_CotizacionDetalle_UnidadMedida" />
+        <AssociationConnector Association="FAYCEModel.FK_Provincia_Departamento" />
+        <AssociationConnector Association="FAYCEModel.FK_Egresos_Empleado" />
+        <AssociationConnector Association="FAYCEModel.FK_Egresos_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_Egresos_Usuario" />
+        <AssociationConnector Association="FAYCEModel.FK_Empleado_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_Empleado_Persona" />
+        <AssociationConnector Association="FAYCEModel.FK_Empleado_TipoProfesion" />
+        <AssociationConnector Association="FAYCEModel.FK_OperadorOrdenTrabajo_Empleado" />
+        <AssociationConnector Association="FAYCEModel.FK_OrdenTrabajo_Empleado" />
+        <AssociationConnector Association="FAYCEModel.FK_Usuario_Empleado" />
+        <AssociationConnector Association="FAYCEModel.FK_Empresa_Persona" />
+        <AssociationConnector Association="FAYCEModel.FK_OrdenCompra_Empresa" />
+        <AssociationConnector Association="FAYCEModel.FK_RequerimientoDetalle_Empresa" />
+        <AssociationConnector Association="FAYCEModel.FK_Estado_TipoEstado" />
+        <AssociationConnector Association="FAYCEModel.FK_MarcaMaterial_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_Material_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_MenuPerfil_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_OrdenTrabajo_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_OrdenVenta_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_PosPrensaOrdenTrabajo_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_PrensaOrdenTrabajo_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_SalidaMateriales_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_SalidaMaterialesDetalle_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_Servicio_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_UnidadMedida_Estado" />
+        <AssociationConnector Association="FAYCEModel.FK_MarcaMaterial_Material" />
+        <AssociationConnector Association="FAYCEModel.FK_PresentacionMaterial_Material" />
+        <AssociationConnector Association="FAYCEModel.FK_RecepcionDetalle_Material" />
+        <AssociationConnector Association="FAYCEModel.FK_RequerimientoDetalle_Producto" />
+        <AssociationConnector Association="FAYCEModel.FK_SalidaMaterialesDetalle_Material" />
+        <AssociationConnector Association="FAYCEModel.FK_Stock_Producto" />
+        <AssociationConnector Association="FAYCEModel.FK_StockTransaccion_Producto" />
+        <AssociationConnector Association="FAYCEModel.FK_MenuPerfil_Menu1" />
+        <AssociationConnector Association="FAYCEModel.FK_OperadorOrdenTrabajo_OdenTrabajo" />
+        <AssociationConnector Association="FAYCEModel.FK_DetalleOrdenCompra_OrdenCompra" />
+        <AssociationConnector Association="FAYCEModel.FK_OrdenCompra_Usuario" />
+        <AssociationConnector Association="FAYCEModel.FK_Recepcion_OrdenCompra" />
+        <AssociationConnector Association="FAYCEModel.FK_OrdenTrabajo_OrdenVentaDetalle" />
+        <AssociationConnector Association="FAYCEModel.FK_PosPrensaOrdenTrabajo_OdenTrabajo" />
+        <AssociationConnector Association="FAYCEModel.FK_PrensaOrdenTrabajo_OdenTrabajo" />
+        <AssociationConnector Association="FAYCEModel.FK_SalidaMaterial_OrdenTrabajo" />
+        <AssociationConnector Association="FAYCEModel.FK_OrdenVenta_Usuario" />
+        <AssociationConnector Association="FAYCEModel.FK_OrdenVentaDetalle_OrdenVenta" />
+        <AssociationConnector Association="FAYCEModel.FK_OrdenVentaDetalle_Servicio" />
+        <AssociationConnector Association="FAYCEModel.FK_OrdenVentaDetalle_UnidadMedida" />
+        <AssociationConnector Association="FAYCEModel.FK_Persona_Provincia" />
+        <AssociationConnector Association="FAYCEModel.FK_Usuario_Persona" />
+        <AssociationConnector Association="FAYCEModel.FK_RecepcionDetalle_Recepcion" />
+        <AssociationConnector Association="FAYCEModel.FK_Requerimiento_Usuario" />
+        <AssociationConnector Association="FAYCEModel.FK_RequerimientoDetalle_Requerimiento" />
+        <AssociationConnector Association="FAYCEModel.FK_RequerimientoDetalle_UnidadMedida" />
+        <AssociationConnector Association="FAYCEModel.FK_SalidaMateriales_Usuario" />
+        <AssociationConnector Association="FAYCEModel.FK_SalidaMaterialesDetalle_Cotizacion" />
+        <AssociationConnector Association="FAYCEModel.FK_SalidaMaterialesDetalle_UnidadMedida" />
+        <AssociationConnector Association="FAYCEModel.FK_Servicio_Usuario" />
+        <AssociationConnector Association="FAYCEModel.FK_StockTransaccion_Usuario" />
+        <AssociationConnector Association="FAYCEModel.FK_Usuario_TipoUsuario" />
+        <AssociationConnector Association="FAYCEModel.FK_TransferenciaStockDetalle_TransferenciaStock" />
+        <EntityTypeShape EntityType="FAYCEModel.AdelantosOrdenVenta" Width="1.5" PointX="21" PointY="51.125" />
+        <AssociationConnector Association="FAYCEModel.FK_AdelantosOrdenVenta_OrdenVenta" />
+        <AssociationConnector Association="FAYCEModel.FK_AdelantosOrdenVenta_Usuario" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,217 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.Master.cs" Inherits="Fay_System.PaginaMaestra" %>
+
+<%@ Register Assembly="DevExpress.Web.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faysystem</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <link href="Content/Style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="Scripts/CustomScripts.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Playball&display=swap');
+
+        .contenido_principal {
+            width: 100%;
+            height: 100%;
+        }
+
+        #page-content {
+            flex: 1 0 auto;
+        }
+
+        .page-footer {
+            background-color: #9fc4c0;
+        }
+
+        .barraNav {
+            background-color: #9fc4c0;
+        }
+
+        .piePag {
+            font-weight: bold;
+            font-family: 'Playball', sans-serif;
+        }
+
+        html,
+        body {
+            height: 100% !important;
+        }
+        /*New*/
+
+        .dxmLite_BassetTheme.dxm-side-menu-mode .dxm-side-menu-button {
+            margin-right: 10px;
+            float: right;
+            margin-top: 2px;
+        }
+
+        .menu-adaptable {
+            background-color: transparent !important;
+            border-color: transparent !important;
+            padding: 10px !important;
+            float: right;
+        }
+    </style>
+    <script type="text/javascript">
+        jQuery(function () {
+            jQuery('.dropdown').hover(function () {
+                jQuery(this).toggleClass('open');
+            });
+        });
+
+        var __reproduccion;
+
+        function Activar(tiempo) {
+            //$("#divMensaje").modal();
+            pcMensajes.Show();
+            var tiem = tiempo * 1000;
+            __reproduccion = setTimeout(function () { Desactivar(); }, tiem, "JavaScript");
+        }
+
+        function Desactivar() {
+            //$("#divMensaje").modal('toggle');
+            //$("#divMensaje").modal('hide');
+            pcMensajes.Hide();
+            clearTimeout(__reproduccion);
+        }
+
+        function LanzarMensaje(mensaje, tiempo = 3) {
+            lblMensaje.SetText(mensaje);
+            Activar(tiempo);
+        }
+        function ClickMainMenu(s, e) {
+            //alert(e.item.GetText() + '-' + e.item.GetItemCount());
+            if (e.item.GetItemCount() != 0)
+                e.processOnServer = false;
+            else {
+                if (e.item.GetText() === 'Salir') {
+                    if (confirm('Está seguro que quiere salir del sistema?')) {
+                        e.processOnServer = true;
+                    }
+                }
+                else if (e.item.GetText() === 'InventarioValorizado') {
+                    cpOpenReport.PerformCallback('2|01/01/2015|01/01/2050');
+                    e.processOnServer = false;
+                }
+                else if (e.item.GetText() === 'IngresosVentas') {
+                    hfNumRep.Set("numRep", 3);
+                    pcParamReport.Show();
+                    e.processOnServer = false;
+                }
+                else if (e.item.GetText() === 'IngresosEgresos') {
+                    hfNumRep.Set("numRep", 4);
+                    pcParamReport.Show();
+                    e.processOnServer = false;
+                }
+            }
+        }
+
+    </script>
+</head>
+<body class="d-flex flex-column">
+    <form runat="server">
+        <div id="divMensaje">
+            <dx:ASPxPopupControl runat="server" ID="pcMensajes" ClientInstanceName="pcMensajes" HeaderText="Mensaje">
+                <SettingsAdaptivity Mode="Always" MaxWidth="400px" HorizontalAlign="WindowCenter"></SettingsAdaptivity>
+                <ContentCollection>
+                    <dx:PopupControlContentControl>
+                        <dx:ASPxLabel ID="lblMensaje" ClientInstanceName="lblMensaje" runat="server" Text=""></dx:ASPxLabel>
+                    </dx:PopupControlContentControl>
+                </ContentCollection>
+            </dx:ASPxPopupControl>
+        </div>
+        <div>
+            <dx:ASPxPopupControl runat="server" ID="pcParamReport" ClientInstanceName="pcParamReport" Theme="Material" HeaderText="Parámetros">
+                <SettingsAdaptivity Mode="Always" MaxWidth="400px" HorizontalAlign="WindowCenter"></SettingsAdaptivity>
+                <ContentCollection>
+                    <dx:PopupControlContentControl>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <dx:ASPxHiddenField runat="server" ClientInstanceName="hfNumRep" ID="hfNumRep"></dx:ASPxHiddenField>
+                                                <dx:ASPxLabel runat="server" ID="lblNumR" Text="Desde:" Theme="Material" Width="100%"></dx:ASPxLabel>
+                                            </div>
+                                            <div class="col-8">
+                                                <dx:ASPxDateEdit runat="server" ID="deDesde" ClientInstanceName="deDesde" Theme="Material" Width="100%"></dx:ASPxDateEdit>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <dx:ASPxLabel runat="server" ID="ASPxLabel1" Text="Hasta:" Theme="Material" Width="100%"></dx:ASPxLabel>
+                                            </div>
+                                            <div class="col-8">
+                                                <dx:ASPxDateEdit runat="server" ID="deHasta" ClientInstanceName="deHasta" Theme="Material" Width="100%"></dx:ASPxDateEdit>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3">
+                                            </div>
+                                            <div class="col-6" style="text-align: center;">
+                                                <dx:ASPxButton runat="server" ID="btnShowReport" Theme="Material" Text="Imprimir Reporte" AutoPostBack="false">
+                                                    <ClientSideEvents Click="function(s, e){cpOpenReport.PerformCallback(hfNumRep.Get('numRep') + '|' + deDesde.GetText() + '|' + deHasta.GetText());}" />
+                                                </dx:ASPxButton>
+                                            </div>
+                                            <div class="col-3"></div>
+                                        </div>
+                                    </div>
+                    </dx:PopupControlContentControl>
+                </ContentCollection>
+            </dx:ASPxPopupControl>
+        </div>
+
+        <asp:ContentPlaceHolder ID="cphMenu" runat="server">
+            <nav class="navbar navbar-expand-lg barraNav">
+                <a class="navbar-brand" href="#">
+                    <img src="imagenes/fayce_logo.png" alt="FAYCE" width="50">
+                </a>
+                <div class="navbar-nav">
+
+                    <dx:ASPxMenu ID="MenuPrin" runat="server" Orientation="Horizontal" CssClass="menu-adaptable" AllowSelectItem="true"
+                        MaximumDynamicDisplayLevels="10" AutoSeparators="None" ShowPopOutImages="True" OnItemClick="MenuPrin_ItemClick"
+                        ShowSubMenuShadow="true" AutoPostBack="false">
+                        <SettingsAdaptivity EnableCollapseToSideMenu="true" Enabled="true" SideMenuExpandMode="OverlayContent" />
+                        <ClientSideEvents ItemClick="ClickMainMenu" />
+                    </dx:ASPxMenu>
+                </div>
+
+            </nav>
+            <div>
+                <dx:ASPxCallbackPanel runat="server" ID="cpOpenReport" ClientInstanceName="cpOpenReport" OnCallback="cpOpenReport_Callback">
+                    <ClientSideEvents EndCallback="function(s, e){
+                        if(s.cpRedireccion != null)
+                            window.open(s.cpRedireccion, '_blank');
+                        delete(s.cpRedireccion)
+                    }" />
+                </dx:ASPxCallbackPanel>
+            </div>
+        </asp:ContentPlaceHolder>
+
+        <div id="page-content">
+            <div class="container">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <footer class="page-footer py-3 piePag">
+            <div class="container text-center">
+                <p>&copy; <%: DateTime.Now.Year %> - FAYCE SRL - Diseñado Por: <a href="https://www.facebook.com/americo.cuevabernal" target="_blank">Americo Cueva</a>  & <a href="https://www.facebook.com/eugenia.villanuevavillena" target="_blank">Eugenia Villanueva</a></p>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>

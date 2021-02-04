@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBD351BC-2CA2-46B3-81C4-818C4684A5CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibreriaDatos</RootNamespace>
+    <AssemblyName>LibreriaDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fay_System\AccesoTipo.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\AdelantosOrdenVenta.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\AjusteInventario.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\AjusteInventarioDetalle.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Almacen.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\AutoCorriativoOrdenTrabajo.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\BodegaInventarioOrdenTrabajo.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Cargo.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\CategoriaTrabajo.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Cliente.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\ComprobanteVenta.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\ComprobanteVentaAuxiliar.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\ComprobanteVentaDetalle.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Configuracion.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\CorrelativoComprobante.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Cotizacion.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\CotizacionDetalle.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Departamento.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\DTO\AjusteInventarioDetalleDTO.cs" />
+    <Compile Include="Fay_System\DTO\DTOAjusteInventario.cs" />
+    <Compile Include="Fay_System\DTO\DTOEgreso.cs" />
+    <Compile Include="Fay_System\DTO\DTOComprobanteDetalle.cs" />
+    <Compile Include="Fay_System\DTO\DTOComprobantes.cs" />
+    <Compile Include="Fay_System\DTO\DTOSalidaMaterialesDetalle.cs" />
+    <Compile Include="Fay_System\DTO\DTOSalidaMateriales.cs" />
+    <Compile Include="Fay_System\DTO\DTOServicio.cs" />
+    <Compile Include="Fay_System\DTO\DTOOrdenesTrabajo.cs" />
+    <Compile Include="Fay_System\DTO\DTOOrdenVentaDetalle.cs" />
+    <Compile Include="Fay_System\DTO\DTOEmpleado.cs" />
+    <Compile Include="Fay_System\DTO\DTOCliente.cs" />
+    <Compile Include="Fay_System\DTO\DTOEmpresa.cs" />
+    <Compile Include="Fay_System\DTO\DTOMenu.cs" />
+    <Compile Include="Fay_System\DTO\DTOMenuBA.cs" />
+    <Compile Include="Fay_System\DTO\DTOMaterial.cs" />
+    <Compile Include="Fay_System\DTO\DTOMvtoMateriales.cs" />
+    <Compile Include="Fay_System\DTO\DTORecepciones.cs" />
+    <Compile Include="Fay_System\DTO\DTOCotizacionDetalle.cs" />
+    <Compile Include="Fay_System\DTO\DTORequerimientoDetalle.cs" />
+    <Compile Include="Fay_System\DTO\DTOOrdenesCompra.cs" />
+    <Compile Include="Fay_System\DTO\DTOCotizaciones.cs" />
+    <Compile Include="Fay_System\DTO\DTORequerimientos.cs" />
+    <Compile Include="Fay_System\DTO\DTOUsuario.cs" />
+    <Compile Include="Fay_System\DTO\TransferenciaStockDetalleDTO.cs" />
+    <Compile Include="Fay_System\DTO\TransferenciaStockDTO.cs" />
+    <Compile Include="Fay_System\Egresos.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Empleado.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Empresa.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Estado.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Fayce_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fayce_Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Fayce_Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Fayce_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fayce_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Formulario.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\MarcaMaterial.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Material.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Menu.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\MenuPerfil.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\MotivoComprobante.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\OperadorOrdenTrabajo.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\OrdenCompra.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\OrdenCompraDetalle.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\OrdenTrabajo.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\OrdenVenta.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\OrdenVentaDetalle.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Perfil.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Persona.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\PosPrensaOrdenTrabajo.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\PrensaOrdenTrabajo.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\PresentacionMaterial.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Provincia.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Recepcion.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\RecepcionDetalle.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\RepAdelantosOrdenVenta.cs" />
+    <Compile Include="Fay_System\RepEgreso.cs" />
+    <Compile Include="Fay_System\RepTransferenciaStockDetalle.cs" />
+    <Compile Include="Fay_System\RepTransferenciaStock.cs" />
+    <Compile Include="Fay_System\RepAlmacen.cs" />
+    <Compile Include="Fay_System\RepComprobanteVentaDetalle.cs" />
+    <Compile Include="Fay_System\RepComprobanteVenta.cs" />
+    <Compile Include="Fay_System\RepAutocorriativoOT.cs" />
+    <Compile Include="Fay_System\RepSalidaMaterial.cs" />
+    <Compile Include="Fay_System\RepSalidaMaterialesDetalle.cs" />
+    <Compile Include="Fay_System\RepPosPrensaOrdenTrabajo.cs" />
+    <Compile Include="Fay_System\RepPrensaOrdenTrabajo.cs" />
+    <Compile Include="Fay_System\RepCargo.cs" />
+    <Compile Include="Fay_System\RepCliente.cs" />
+    <Compile Include="Fay_System\RepCotizacion.cs" />
+    <Compile Include="Fay_System\RepCotizacionDetalle.cs" />
+    <Compile Include="Fay_System\RepDepartamento.cs" />
+    <Compile Include="Fay_System\RepEmpleado.cs" />
+    <Compile Include="Fay_System\RepEstado.cs" />
+    <Compile Include="Fay_System\RepMenu.cs" />
+    <Compile Include="Fay_System\RepMaterial.cs" />
+    <Compile Include="Fay_System\RepMvtoMateriales.cs" />
+    <Compile Include="Fay_System\RepBodegaInventarioCorte.cs" />
+    <Compile Include="Fay_System\RepOrdenTrabajo.cs" />
+    <Compile Include="Fay_System\RepAjusteInventario.cs" />
+    <Compile Include="Fay_System\RepOperadorOrdenTrabajo.cs" />
+    <Compile Include="Fay_System\RepOrdenVenta.cs" />
+    <Compile Include="Fay_System\RepAjusteInventarioDetalle.cs" />
+    <Compile Include="Fay_System\RepOrdenVentaDetalle.cs" />
+    <Compile Include="Fay_System\RepMenuPerfil.cs" />
+    <Compile Include="Fay_System\RepPersona.cs" />
+    <Compile Include="Fay_System\RepProvincia.cs" />
+    <Compile Include="Fay_System\RepServicios.cs" />
+    <Compile Include="Fay_System\RepStock.cs" />
+    <Compile Include="Fay_System\RepTipoDocumento.cs" />
+    <Compile Include="Fay_System\RepEmpresa.cs" />
+    <Compile Include="Fay_System\RepositorioTipoDocumento.cs" />
+    <Compile Include="Fay_System\RepRecepcionDetalle.cs" />
+    <Compile Include="Fay_System\Reporte.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\RepositorioEmpresa.cs" />
+    <Compile Include="Fay_System\RepositorioRecepcionDetalle.cs" />
+    <Compile Include="Fay_System\RepTipoProfesion.cs" />
+    <Compile Include="Fay_System\RepTipoUsuario.cs" />
+    <Compile Include="Fay_System\RepMarcaMaterial.cs" />
+    <Compile Include="Fay_System\RepUnidadMedida.cs" />
+    <Compile Include="Fay_System\Requerimiento.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\RequerimientoDetalle.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\SalidaMaterial.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\SalidaMaterialesDetalle.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Servicio.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Stock.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\StockTransaccion.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\TipoDocumento.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\TipoEstado.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\TipoPago.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\TipoProfesion.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\TipoUsuario.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\TransferenciaStock.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\TransferenciaStockDetalle.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\UnidadMedida.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fay_System\Usuario.cs">
+      <DependentUpon>Fayce_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Fay_System\RepositorioRecepcion.cs" />
+    <Compile Include="Fay_System\RepRecepcion.cs" />
+    <Compile Include="Fay_System\RepOrdenCompraDetalle.cs" />
+    <Compile Include="Fay_System\Repositorio.cs" />
+    <Compile Include="Fay_System\RepositorioOrdenCompraDetalle.cs" />
+    <Compile Include="Fay_System\RepositorioOrdenCompra.cs" />
+    <Compile Include="Fay_System\RepositorioRequerimientoDetalle.cs" />
+    <Compile Include="Fay_System\RepositorioRequerimiento.cs" />
+    <Compile Include="Fay_System\RepositorioUsuario.cs" />
+    <Compile Include="Fay_System\RepOrdenCompra.cs" />
+    <Compile Include="Fay_System\RepRequerimientoDetalle.cs" />
+    <Compile Include="Fay_System\RepRequerimiento.cs" />
+    <Compile Include="Fay_System\RepUsuario.cs" />
+    <Compile Include="Fay_System\UnidadDeTrabajo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Fay_System\Fayce_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Fayce_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Fay_System\Fayce_Model.edmx.diagram">
+      <DependentUpon>Fayce_Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Fay_System\Fayce_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Fayce_Model.edmx</DependentUpon>
+      <LastGenOutput>Fayce_Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Fay_System\Fayce_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Fayce_Model.edmx</DependentUpon>
+      <LastGenOutput>Fayce_Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

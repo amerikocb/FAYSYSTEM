@@ -1,0 +1,48 @@
+﻿
+.dxm-horizontal.dxm-noWrap > ul > li {
+    float: left !important;
+}
+
+.responsive-menu {
+    padding: 1.5em !important;
+    min-width: 0px !important;
+}
+
+    .responsive-menu .dxm-hovered {
+        /* Remove a hover image */
+        background: #888888 url() !important;
+    }
+
+    .responsive-menu > ul {
+        float: left !important;
+        width: 100% !important;
+        display: block !important;
+    }
+
+        .responsive-menu > ul > li {
+            width: 50%;
+            display: block !important;
+            float: left !important;
+            min-width: 0 !important;
+        }
+
+            .responsive-menu > ul > li.dxm-separator {
+                display: none !important;
+            }
+
+            .responsive-menu > ul > li span {
+                display: block !important;
+                width: 100%;
+            }
+
+            .responsive-menu > ul > li img {
+                margin-right: 0 !important;
+            }
+
+            .responsive-menu > ul > li > div.dxm-content {
+                min-width: 75px;
+                width: 100%;
+                display: table-cell;
+                text-align: center;
+                padding: 8px 0 !important;
+            }
